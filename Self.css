@@ -1,0 +1,1334 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding-top: 50px;
+  /* 设置顶部内边距 */
+}
+
+
+.document-toc-item {
+  --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-body: Inter, var(--font-fallback);
+  --font-heading: Inter, var(--font-fallback);
+  --font-code: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --base-font-size: 100%;
+  --base-line-height: 1.2;
+  --intermediate-line-height: 1.5;
+  --heading-line-height: var(--base-line-height);
+  --heading-letter-spacing: -0.031rem;
+  --font-content-line-height: 1.75;
+  --font-body-strong-weight: 600;
+  --type-heading-h1-font-size: 2.488rem;
+  --type-heading-h2-font-size: 2.074rem;
+  --type-heading-h3-font-size: 1.728rem;
+  --type-heading-h4-font-size: 1.44rem;
+  --type-heading-h5-font-size: 1.2rem;
+  --type-base-font-size-rem: 1rem;
+  --type-smaller-font-size: 0.833rem;
+  --type-tiny-font-size: 0.694rem;
+  --type-heading-h1-font-size-mobile: 1.802rem;
+  --type-heading-h2-font-size-mobile: 1.602rem;
+  --type-heading-h3-font-size-mobile: 1.424rem;
+  --type-heading-h4-font-size-mobile: 1.266rem;
+  --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
+  --type-label-s: 600 var(--type-tiny-font-size) /1.2 var(--font-heading);
+  --type-heading-h5: 400 var(--type-heading-h5-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h6: 400 var(--type-base-font-size-rem) /var(--heading-line-height) var(--font-heading);
+  --type-article-p: 400 var(--type-base-font-size-rem) /var(--font-content-line-height) var(--font-body);
+  --max-width: 1440px;
+  --gutter: 1rem;
+  --top-navigation-height: 4rem;
+  --top-navigation-offset: -4rem;
+  --top-banner-inner-height: 3.125rem;
+  --top-banner-height: calc(var(--top-banner-inner-height) + 0.25rem);
+  --top-banner-outer-height: calc(var(--top-banner-height) + 2px);
+  --z-index-a11y: 10000;
+  --z-index-modal-content: 801;
+  --z-index-modal-overlay: 800;
+  --z-index-main-header: 700;
+  --z-index-sidebar-mobile: 600;
+  --z-index-mid: 500;
+  --z-index-nav-menu: 200;
+  --z-index-search-results: 101;
+  --z-index-low: 100;
+  --z-index-search-results-home: 99;
+  --z-index-back: -1;
+  --elem-radius: 0.25rem;
+  --focus-effect: 0 0 0 3px var(--accent-primary-engage);
+  --form-elem-height: 2rem;
+  --top-nav-height: 4rem;
+  --article-actions-container-height: 2rem;
+  --icon-size: 1rem;
+  --sticky-header-height: calc(var(--top-nav-height) + var(--article-actions-container-height) + 2px);
+  --type-heading-h1: 600 var(--type-heading-h1-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h2: 500 var(--type-heading-h2-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h3: 300 var(--type-heading-h3-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h4: 400 var(--type-heading-h4-font-size) /var(--heading-line-height) var(--font-heading);
+  --text-primary: #1b1b1b;
+  --text-secondary: #4e4e4e;
+  --text-inactive: #9e9e9ea6;
+  --text-link: #0069c2;
+  --text-invert: #fff;
+  --background-primary: #fff;
+  --background-secondary: #f9f9fb;
+  --background-tertiary: #fff;
+  --background-mark-yellow: rgba(199, 183, 0, .4);
+  --background-mark-green: rgba(0, 208, 97, .4);
+  --background-information: rgba(0, 133, 242, .1);
+  --background-warning: rgba(255, 42, 81, .1);
+  --background-critical: rgba(211, 0, 56, .1);
+  --background-success: rgba(0, 121, 54, .1);
+  --border-primary: #cdcdcd;
+  --border-secondary: #cdcdcd;
+  --button-primary-default: #1b1b1b;
+  --button-primary-hover: #696969;
+  --button-primary-active: #9e9e9e;
+  --button-primary-inactive: #1b1b1b;
+  --button-secondary-default: #fff;
+  --button-secondary-hover: #cdcdcd;
+  --button-secondary-active: #cdcdcd;
+  --button-secondary-inactive: #f9f9fb;
+  --button-secondary-border-focus: #0085f2;
+  --button-secondary-border-red: #ff97a0;
+  --button-secondary-border-red-focus: #ffd9dc;
+  --icon-primary: #696969;
+  --icon-secondary: #b3b3b3;
+  --icon-information: #0085f2;
+  --icon-warning: #ff2a51;
+  --icon-critical: #d30038;
+  --icon-success: #007936;
+  --accent-primary: #0085f2;
+  --accent-primary-engage: rgba(0, 133, 242, .1);
+  --accent-secondary: #0085f2;
+  --accent-tertiary: rgba(0, 133, 242, .1);
+  --shadow-01: 0 1px 2px rgba(43, 42, 51, .05);
+  --shadow-02: 0 1px 6px rgba(43, 42, 51, .1);
+  --focus-01: 0 0 0 3px rgba(0, 144, 237, .4);
+  --field-focus-border: #0085f2;
+  --code-token-tag: #0069c2;
+  --code-token-punctuation: #858585;
+  --code-token-attribute-name: #d30038;
+  --code-token-attribute-value: #007936;
+  --code-token-comment: #858585;
+  --code-token-default: #1b1b1b;
+  --code-token-selector: #872bff;
+  --code-background-inline: #f2f1f1;
+  --code-background-block: #f2f1f1;
+  --notecard-link-color: #343434;
+  --scrollbar-bg: transparent;
+  --scrollbar-color: rgba(0, 0, 0, .25);
+  --code-color: #5e9eff;
+  --plus-accent-color: #d30038;
+  --html-accent-color: #d30038;
+  --css-accent-color: #0069c2;
+  --js-accent-color: #afa100;
+  --http-accent-color: #007936;
+  --apis-accent-color: #872bff;
+  --learn-accent-color: #d00058;
+  --plus-code-color: #0069c2;
+  --html-code-color: #9e0027;
+  --css-code-color: #0069c2;
+  --js-code-color: #746a00;
+  --http-code-color: #007936;
+  --apis-code-color: #872bff;
+  --learn-code-color: #d00058;
+  --plus-mark-color: #ffd9dc;
+  --html-mark-color: #ffd9dc;
+  --css-mark-color: #dce2f2;
+  --js-mark-color: #f0e498;
+  --http-mark-color: #a9f3ba;
+  --apis-mark-color: #e6deff;
+  --learn-mark-color: #ffd9df;
+  --plus-accent-background-color: #ff2a5130;
+  --html-accent-background-color: #ff2a5130;
+  --css-accent-background-color: #0085f230;
+  --js-accent-background-color: #93870030;
+  --http-accent-background-color: #009a4630;
+  --apis-accent-background-color: #9b65ff30;
+  --learn-accent-background-color: #ff1f7230;
+  --plus-accent-engage: rgba(255, 42, 81, .7);
+  --html-accent-engage: rgba(255, 42, 81, .7);
+  --css-accent-engage: rgba(0, 133, 242, .7);
+  --js-accent-engage: rgba(147, 135, 0, .7);
+  --http-accent-engage: rgba(0, 154, 70, .7);
+  --apis-accent-engage: rgba(155, 101, 255, .7);
+  --learn-accent-engage: rgba(255, 31, 114, .7);
+  --modal-backdrop-color: rgba(27, 27, 27, .1);
+  --blend-color: #fff80;
+  --text-primary-red: #d30038;
+  --text-primary-green: #007936;
+  --text-primary-blue: #0069c2;
+  --text-primary-yellow: #746a00;
+  --collections-link: #9e0027;
+  --collections-header: #ffd9dc;
+  --collections-mandala: #ff97a0;
+  --collections-icon: #ff2a51;
+  --updates-link: #0069c2;
+  --updates-header: #f9f9fb;
+  --updates-mandala: #8cb4ff;
+  --updates-icon: #0085f2;
+  --ai-help-link: #007936;
+  --ai-help-header: #f9f9fb;
+  --ai-help-mandala: #00d061;
+  --ai-help-icon: #009a46;
+  --form-limit-color: #696969;
+  --form-limit-color-emphasis: #4e4e4e;
+  --form-invalid-color: #d30038;
+  --form-invalid-focus-color: #ff2a51;
+  --form-invalid-focus-effect-color: rgba(255, 42, 81, .2);
+  --baseline-supported-bg: #e6f4ea;
+  --baseline-supported-engine-bg: #ceead6;
+  --baseline-supported-img: url(/static/media/check.8cb62e63a10e04feb9c2.svg);
+  --baseline-unsupported-bg: #f1f3f4;
+  --baseline-unsupported-engine-bg: #e3e6e8;
+  --baseline-unsupported-img: url(/static/media/cross.7dc7a2513df12871a856.svg);
+  --baseline-browser-supported-bg: #1e8e3e;
+  --baseline-browser-unsupported-bg: #666;
+  color-scheme: light;
+  font-family: var(--font-body);
+  line-height: var(--font-content-line-height);
+  text-rendering: optimizeSpeed;
+  accent-color: var(--accent-primary);
+  color: var(--text-primary);
+  --mdn-color-white: #fff;
+  --mdn-color-black: #000;
+  --mdn-color-ads: #00d0aa;
+  --mdn-color-background-highlight: #f0e498;
+  --mdn-color-dark-grey: #4e4e4e;
+  --mdn-background-dark: #1b1b1b;
+  --mdn-background-light: #fff;
+  --mdn-background-light-grey: #e2e2e2;
+  --color-announcement-banner-accent: #ff6d91;
+  --background-toc-active: var(--js-accent-background-color);
+  --category-color: var(--js-accent-color);
+  --category-color-engage: var(--js-accent-engage);
+  --category-color-background: var(--js-accent-background-color);
+  --mark-color: var(--js-mark-color);
+  --max-height: calc(100vh - var(--offset));
+  --offset: var(--sticky-header-height);
+  font-size: var(--type-smaller-font-size);
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.document-toc-link {
+  --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-body: Inter, var(--font-fallback);
+  --font-heading: Inter, var(--font-fallback);
+  --font-code: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --base-font-size: 100%;
+  --base-line-height: 1.2;
+  --intermediate-line-height: 1.5;
+  --heading-line-height: var(--base-line-height);
+  --heading-letter-spacing: -0.031rem;
+  --font-content-line-height: 1.75;
+  --font-body-strong-weight: 600;
+  --type-heading-h1-font-size: 2.488rem;
+  --type-heading-h2-font-size: 2.074rem;
+  --type-heading-h3-font-size: 1.728rem;
+  --type-heading-h4-font-size: 1.44rem;
+  --type-heading-h5-font-size: 1.2rem;
+  --type-base-font-size-rem: 1rem;
+  --type-smaller-font-size: 0.833rem;
+  --type-tiny-font-size: 0.694rem;
+  --type-heading-h1-font-size-mobile: 1.802rem;
+  --type-heading-h2-font-size-mobile: 1.602rem;
+  --type-heading-h3-font-size-mobile: 1.424rem;
+  --type-heading-h4-font-size-mobile: 1.266rem;
+  --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
+  --type-label-s: 600 var(--type-tiny-font-size) /1.2 var(--font-heading);
+  --type-heading-h5: 400 var(--type-heading-h5-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h6: 400 var(--type-base-font-size-rem) /var(--heading-line-height) var(--font-heading);
+  --type-article-p: 400 var(--type-base-font-size-rem) /var(--font-content-line-height) var(--font-body);
+  --max-width: 1440px;
+  --gutter: 1rem;
+  --top-navigation-height: 4rem;
+  --top-navigation-offset: -4rem;
+  --top-banner-inner-height: 3.125rem;
+  --top-banner-height: calc(var(--top-banner-inner-height) + 0.25rem);
+  --top-banner-outer-height: calc(var(--top-banner-height) + 2px);
+  --z-index-a11y: 10000;
+  --z-index-modal-content: 801;
+  --z-index-modal-overlay: 800;
+  --z-index-main-header: 700;
+  --z-index-sidebar-mobile: 600;
+  --z-index-mid: 500;
+  --z-index-nav-menu: 200;
+  --z-index-search-results: 101;
+  --z-index-low: 100;
+  --z-index-search-results-home: 99;
+  --z-index-back: -1;
+  --elem-radius: 0.25rem;
+  --focus-effect: 0 0 0 3px var(--accent-primary-engage);
+  --form-elem-height: 2rem;
+  --top-nav-height: 4rem;
+  --article-actions-container-height: 2rem;
+  --icon-size: 1rem;
+  --sticky-header-height: calc(var(--top-nav-height) + var(--article-actions-container-height) + 2px);
+  --type-heading-h1: 600 var(--type-heading-h1-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h2: 500 var(--type-heading-h2-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h3: 300 var(--type-heading-h3-font-size) /var(--heading-line-height) var(--font-heading);
+  --type-heading-h4: 400 var(--type-heading-h4-font-size) /var(--heading-line-height) var(--font-heading);
+  --text-primary: #1b1b1b;
+  --text-secondary: #4e4e4e;
+  --text-inactive: #9e9e9ea6;
+  --text-link: #0069c2;
+  --text-invert: #fff;
+  --background-primary: #fff;
+  --background-secondary: #f9f9fb;
+  --background-tertiary: #fff;
+  --background-mark-yellow: rgba(199, 183, 0, .4);
+  --background-mark-green: rgba(0, 208, 97, .4);
+  --background-information: rgba(0, 133, 242, .1);
+  --background-warning: rgba(255, 42, 81, .1);
+  --background-critical: rgba(211, 0, 56, .1);
+  --background-success: rgba(0, 121, 54, .1);
+  --border-primary: #cdcdcd;
+  --border-secondary: #cdcdcd;
+  --button-primary-default: #1b1b1b;
+  --button-primary-hover: #696969;
+  --button-primary-active: #9e9e9e;
+  --button-primary-inactive: #1b1b1b;
+  --button-secondary-default: #fff;
+  --button-secondary-hover: #cdcdcd;
+  --button-secondary-active: #cdcdcd;
+  --button-secondary-inactive: #f9f9fb;
+  --button-secondary-border-focus: #0085f2;
+  --button-secondary-border-red: #ff97a0;
+  --button-secondary-border-red-focus: #ffd9dc;
+  --icon-primary: #696969;
+  --icon-secondary: #b3b3b3;
+  --icon-information: #0085f2;
+  --icon-warning: #ff2a51;
+  --icon-critical: #d30038;
+  --icon-success: #007936;
+  --accent-primary: #0085f2;
+  --accent-primary-engage: rgba(0, 133, 242, .1);
+  --accent-secondary: #0085f2;
+  --accent-tertiary: rgba(0, 133, 242, .1);
+  --shadow-01: 0 1px 2px rgba(43, 42, 51, .05);
+  --shadow-02: 0 1px 6px rgba(43, 42, 51, .1);
+  --focus-01: 0 0 0 3px rgba(0, 144, 237, .4);
+  --field-focus-border: #0085f2;
+  --code-token-tag: #0069c2;
+  --code-token-punctuation: #858585;
+  --code-token-attribute-name: #d30038;
+  --code-token-attribute-value: #007936;
+  --code-token-comment: #858585;
+  --code-token-default: #1b1b1b;
+  --code-token-selector: #872bff;
+  --code-background-inline: #f2f1f1;
+  --code-background-block: #f2f1f1;
+  --notecard-link-color: #343434;
+  --scrollbar-bg: transparent;
+  --scrollbar-color: rgba(0, 0, 0, .25);
+  --code-color: #5e9eff;
+  --plus-accent-color: #d30038;
+  --html-accent-color: #d30038;
+  --css-accent-color: #0069c2;
+  --js-accent-color: #afa100;
+  --http-accent-color: #007936;
+  --apis-accent-color: #872bff;
+  --learn-accent-color: #d00058;
+  --plus-code-color: #0069c2;
+  --html-code-color: #9e0027;
+  --css-code-color: #0069c2;
+  --js-code-color: #746a00;
+  --http-code-color: #007936;
+  --apis-code-color: #872bff;
+  --learn-code-color: #d00058;
+  --plus-mark-color: #ffd9dc;
+  --html-mark-color: #ffd9dc;
+  --css-mark-color: #dce2f2;
+  --js-mark-color: #f0e498;
+  --http-mark-color: #a9f3ba;
+  --apis-mark-color: #e6deff;
+  --learn-mark-color: #ffd9df;
+  --plus-accent-background-color: #ff2a5130;
+  --html-accent-background-color: #ff2a5130;
+  --css-accent-background-color: #0085f230;
+  --js-accent-background-color: #93870030;
+  --http-accent-background-color: #009a4630;
+  --apis-accent-background-color: #9b65ff30;
+  --learn-accent-background-color: #ff1f7230;
+  --plus-accent-engage: rgba(255, 42, 81, .7);
+  --html-accent-engage: rgba(255, 42, 81, .7);
+  --css-accent-engage: rgba(0, 133, 242, .7);
+  --js-accent-engage: rgba(147, 135, 0, .7);
+  --http-accent-engage: rgba(0, 154, 70, .7);
+  --apis-accent-engage: rgba(155, 101, 255, .7);
+  --learn-accent-engage: rgba(255, 31, 114, .7);
+  --modal-backdrop-color: rgba(27, 27, 27, .1);
+  --blend-color: #fff80;
+  --text-primary-red: #d30038;
+  --text-primary-green: #007936;
+  --text-primary-blue: #0069c2;
+  --text-primary-yellow: #746a00;
+  --collections-link: #9e0027;
+  --collections-header: #ffd9dc;
+  --collections-mandala: #ff97a0;
+  --collections-icon: #ff2a51;
+  --updates-link: #0069c2;
+  --updates-header: #f9f9fb;
+  --updates-mandala: #8cb4ff;
+  --updates-icon: #0085f2;
+  --ai-help-link: #007936;
+  --ai-help-header: #f9f9fb;
+  --ai-help-mandala: #00d061;
+  --ai-help-icon: #009a46;
+  --form-limit-color: #696969;
+  --form-limit-color-emphasis: #4e4e4e;
+  --form-invalid-color: #d30038;
+  --form-invalid-focus-color: #ff2a51;
+  --form-invalid-focus-effect-color: rgba(255, 42, 81, .2);
+  --baseline-supported-bg: #e6f4ea;
+  --baseline-supported-engine-bg: #ceead6;
+  --baseline-supported-img: url(/static/media/check.8cb62e63a10e04feb9c2.svg);
+  --baseline-unsupported-bg: #f1f3f4;
+  --baseline-unsupported-engine-bg: #e3e6e8;
+  --baseline-unsupported-img: url(/static/media/cross.7dc7a2513df12871a856.svg);
+  --baseline-browser-supported-bg: #1e8e3e;
+  --baseline-browser-unsupported-bg: #666;
+  color-scheme: light;
+  font-family: var(--font-body);
+  line-height: var(--font-content-line-height);
+  text-rendering: optimizeSpeed;
+  accent-color: var(--accent-primary);
+  --mdn-color-white: #fff;
+  --mdn-color-black: #000;
+  --mdn-color-ads: #00d0aa;
+  --mdn-color-background-highlight: #f0e498;
+  --mdn-color-dark-grey: #4e4e4e;
+  --mdn-background-dark: #1b1b1b;
+  --mdn-background-light: #fff;
+  --mdn-background-light-grey: #e2e2e2;
+  --color-announcement-banner-accent: #ff6d91;
+  --background-toc-active: var(--js-accent-background-color);
+  --category-color: var(--js-accent-color);
+  --category-color-engage: var(--js-accent-engage);
+  --category-color-background: var(--js-accent-background-color);
+  --mark-color: var(--js-mark-color);
+  --max-height: calc(100vh - var(--offset));
+  --offset: var(--sticky-header-height);
+  font-size: var(--type-smaller-font-size);
+  list-style: none;
+  box-sizing: border-box;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  background-color: var(--background-toc-active);
+  border-left: 2px solid var(--category-color);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+
+
+
+
+
+/* 蓝色横幅样式 */
+#banner {
+  position: fixed;
+  background-color: rgb(21, 42, 140);
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#banner .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16.666%;
+  /* 六分之一宽度 */
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+#banner img {
+  position: absolute;
+  display: block;
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 图片位置样式 */
+.image-container {
+  float: left;
+  width: 16.6667%;
+  height: 50px;
+}
+
+
+/* 预留的div样式 */
+.content-div {
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+}
+
+#MainBlock {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+
+  margin-left: 200px;
+  float: right;
+  width: 85%;
+  height: calc(100% - 20px)
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(246, 243, 241);
+  overflow: hidden;
+  transition: width 0.3s;
+  /* 添加过渡效果 */
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 100%;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: right 0.3s;
+  /* 添加过渡效果 */
+  z-index: 1;
+}
+
+.sidebar-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  /* 添加过渡效果 */
+}
+
+.sidebar-collapsed .sidebar-toggle {
+  right: 0;
+}
+
+.sidebar-collapsed .sidebar-content {
+  opacity: 0;
+}
+
+/* 容器样式 */
+#container {
+  position: relative;
+  /* 相对定位 */
+  /*原本设置了左外边距，但在父元素已经设置了以后这就没有必要了，让出侧边的基础之上再次让出过于浪费空间*/
+  /* margin-left: 16.6667%; /*侧边栏的宽度,与侧边栏进行分离防止渲染出的图案占据整个页面 */
+
+  padding-left: 20px;
+  /* 内容的左侧内边距，以避免被侧边栏遮挡 */
+
+  height: calc(100% - 20px);
+  width: 80%;
+  /* 占据剩余宽度的 2/3 */
+  float: left;
+}
+
+/* 容器内图表样式 */
+.chart {
+  position: absolute;
+  /* 绝对定位 */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+li::marker {
+  color: rgb(148, 168, 3);
+}
+
+summary {
+  display: block;
+  position: relative;
+  padding: 10px;
+  cursor: default;
+}
+
+summary::before {
+
+  display: inline-block;
+  width: 10px;
+  /* 设置按钮的宽度 */
+  height: 10px;
+  /* 设置按钮的高度 */
+  background-color: #333;
+  /* 设置按钮的颜色 */
+  margin-right: 10px;
+  /* 设置按钮与文本之间的间距 */
+  float: right;
+  /* 将按钮向右浮动 */
+  margin-top: 2px;
+  /* 调整按钮在垂直方向上的位置 */
+
+}
+
+.Choice {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.arrow {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Arial, sans-serif !important;
+  font-size: 12px;
+  color: #727375;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 70px;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+#BasicSQL {
+  flex: 1;
+  height: calc(80% - 20px);
+}
+
+#container {
+  flex: 1;
+  height: calc(80% - 20px);
+}
+
+.delete-button {
+  position: absolute;
+
+  left: 300px;
+}
+
+.text-line {
+  /* background-color: #dff1b3; */
+  position: relative;
+}
+
+
+.data-row {
+  padding: 5px 0;
+  /* 上下各增加 5px 的内边距 */
+}
+
+
+#content {
+  width: calc(100% - 40px);
+  height: calc(100% - 60px);
+
+  overflow: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 60px;
+}
+
+
+#SmallWindows {
+  display: flex;
+  /* 将 SmallWindows 元素设置为弹性容器 */
+
+  overflow: hidden;
+}
+
+
+.small-windows-container {
+  /* 使其位置固定，但也会引发下面content脱离结构的连锁效应 */
+  position: fixed;
+  display: flex;
+  width: 100%;
+  margin-left: 5px;
+  overflow: hidden;
+  background-color: white;
+  /* height: 50px; */
+
+}
+
+.window-small-content {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  /*垂直居中对齐 */
+  border-style: ridge;
+  /* background-color: #d4cece; */
+}
+
+/* 悬浮在主页面框上的小窗 */
+.window-content {
+  margin-top: 10px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  /*垂直居中对齐 */
+  border-style: groove;
+  border-width: 0.6px;
+  background-color: #efebe3;
+}
+
+.window-content:hover {
+  background-color: #f8eeee;
+  color: #0e72c9;
+}
+
+.window-content.active {
+  border-color: #4d5bfb;
+  background-color: #f8f1f1;
+  color: #0e72c9;
+}
+
+.window-content a {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* 调整文字和按钮之间的间距 */
+}
+
+.window-content button {
+  margin-right: 5px;
+}
+
+/* 修改 .window 元素的样式 */
+.window {
+  display: inline-block;
+  /* 横向排列 */
+  white-space: nowrap;
+  /* 不换行 */
+  margin-right: 10px;
+  /* 添加适当的右边距，用于分隔窗口元素 */
+}
+
+
+#CreateTask {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --antd-wave-shadow-color: var(--ant-primary-color);
+  --scroll-bar: 0;
+  --ant-primary-color: rgb(47, 84, 235);
+  --ant-primary-color-disabled: #d6e4ff;
+  --ant-primary-color-hover: #597ef7;
+  --ant-primary-color-active: #10239e;
+  --ant-primary-color-outline: rgba(47, 84, 235, 0.2);
+  --ant-primary-color-deprecated-bg: #d6e4ff;
+  --ant-primary-color-deprecated-border: #85a5ff;
+  --ant-primary-1: #f0f5ff;
+  --ant-primary-2: #d6e4ff;
+  --ant-primary-3: #adc6ff;
+  --ant-primary-4: #85a5ff;
+  --ant-primary-5: #597ef7;
+  --ant-primary-6: #2f54eb;
+  --ant-primary-7: #1d39c4;
+  --ant-primary-8: #10239e;
+  --ant-primary-9: #061178;
+  --ant-primary-10: #030852;
+  --ant-primary-color-deprecated-l-35: rgb(210, 218, 251);
+  --ant-primary-color-deprecated-l-20: rgb(140, 160, 244);
+  --ant-primary-color-deprecated-t-20: rgb(89, 118, 239);
+  --ant-primary-color-deprecated-t-50: rgb(151, 170, 245);
+  --ant-primary-color-deprecated-f-12: rgba(47, 84, 235, 0.12);
+  --ant-primary-color-active-deprecated-f-30: rgba(240, 245, 255, 0.3);
+  --ant-primary-color-active-deprecated-d-02: rgb(230, 238, 255);
+  --ant-success-color: rgb(82, 196, 26);
+  --ant-success-color-disabled: #d9f7be;
+  --ant-success-color-hover: #73d13d;
+  --ant-success-color-active: #237804;
+  --ant-success-color-outline: rgba(82, 196, 26, 0.2);
+  --ant-success-color-deprecated-bg: #d9f7be;
+  --ant-success-color-deprecated-border: #95de64;
+  --ant-warning-color: rgb(250, 173, 20);
+  --ant-warning-color-disabled: #fff1b8;
+  --ant-warning-color-hover: #ffc53d;
+  --ant-warning-color-active: #ad6800;
+  --ant-warning-color-outline: rgba(250, 173, 20, 0.2);
+  --ant-warning-color-deprecated-bg: #fff1b8;
+  --ant-warning-color-deprecated-border: #ffd666;
+  --ant-error-color: rgb(255, 77, 79);
+  --ant-error-color-disabled: #fff1f0;
+  --ant-error-color-hover: #ff7875;
+  --ant-error-color-active: #b32430;
+  --ant-error-color-outline: rgba(255, 77, 79, 0.2);
+  --ant-error-color-deprecated-bg: #fff1f0;
+  --ant-error-color-deprecated-border: #ffa39e;
+  --ant-info-color: rgb(24, 144, 255);
+  --ant-info-color-disabled: #bae7ff;
+  --ant-info-color-hover: #40a9ff;
+  --ant-info-color-active: #0050b3;
+  --ant-info-color-outline: rgba(24, 144, 255, 0.2);
+  --ant-info-color-deprecated-bg: #bae7ff;
+  --ant-info-color-deprecated-border: #69c0ff;
+  --bg-sider: #fff;
+  -webkit-font-smoothing: antialiased;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+  overflow: visible;
+  text-transform: none;
+  width: 15%;
+  -webkit-appearance: button;
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  border: 1px solid #d9d9d9;
+  outline: 0;
+  height: 40px;
+  padding: 6.4px 15px;
+  font-size: 16px;
+  border-radius: 2px;
+  color: #fff;
+  border-color: var(--ant-primary-color);
+  background: var(--ant-primary-color);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px rgba(0, 0, 0, .043);
+}
+
+#CreateTask:hover {
+  background-color: #40a9ff;
+}
+
+th {
+  white-space: nowrap;
+  /* 防止文本换行 */
+  /* overflow: hidden; 隐藏溢出的文本 */
+  text-overflow: ellipsis;
+  /* 使用省略号表示文本溢出 */
+  max-height: 2.6em;
+  /* 设置最大高度为两行文本的高度 */
+  line-height: 1.3em;
+  /* 设置每行文本的行高 */
+  background-color: #68a4d9;
+}
+
+td {
+  min-width: 10em;
+  white-space: nowrap;
+}
+
+/* #tableContainer td {
+  white-space: normal;
+} */
+.RowOne {
+  background-color: #d3d3d3;
+  /* 设置行背景色为浅灰色 */
+}
+
+.RowTwo {
+  background-color: #faf6e7;
+  /* 设置行背景色为白色 */
+}
+
+.Task {
+  height: 120px;
+  border-style: hidden;
+
+  border-style: double;
+  border-color: #737bca;
+  border-width: 0.8px;
+  background-color: #00d0aa;
+  width: 90%;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  display: flex;
+
+  background-image: linear-gradient(to bottom left, white 40%, #69b4ec);
+  /* 使用 linear-gradient 设置线性渐变，to bottom right 表示从左上角到右下角的方向 */
+  /* 设置右下角和左下角为圆角，数值可以根据需要进行调整 */
+  border-radius: 30px;
+}
+
+
+
+
+.TaskName {
+  /* background-color: #218be2; */
+  background-image: linear-gradient(to bottom right, #094293, rgb(117, 230, 253));
+  height: 100%;
+  width: 10%;
+
+  display: flex;
+  text-align: center;
+  /* 水平居中文本内容 */
+  align-items: center;
+  /* 垂直居中子元素 */
+  justify-content: center;
+  /* 水平居中子元素 */
+  /* 设置右下角和左下角为圆角，数值可以根据需要进行调整 */
+  border-radius: 30px 0 0 30px;
+}
+
+
+
+input[type="checkbox"] {
+  margin-top: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: gray;
+}
+
+.TaskChoice {}
+
+.ShowInformation {
+  /* display: flex;  */
+  /* margin-left: 10%; */
+  display: block;
+  text-align: center;
+  /* 水平居中文本内容 */
+  align-items: center;
+  /* 垂直居中子元素 */
+  width: 60%;
+  border-style: hidden;
+  border-left-style: groove;
+  border-right-style: groove;
+  border-width: 0.8px;
+  border-color: #000;
+}
+
+.ShowVin {
+
+  height: 50%;
+  display: flex;
+  align-items: center;
+  /* 垂直居中子元素 */
+  width: 100%;
+  border-bottom-style: groove;
+  border-width: 1px;
+  border-color: #000;
+}
+
+.VinData {
+  margin-left: 10px;
+}
+
+.DataChoice {
+  text-align: center;
+  /* 水平居中文本内容 */
+  align-items: center;
+  /* 垂直居中子元素 */
+}
+
+.StartTask {
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 70px;
+  height: 60px;
+  background-color: #fff28e;
+  border-style: groove;
+  border-color: #b5f349;
+  font-weight: bold;
+  border-radius: 10px;
+  /* 这里设置圆角的半径为10像素 */
+}
+
+.StartTask:hover {
+  background-color: #f8e099;
+}
+
+.DeleteTask {
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 70px;
+  height: 60px;
+  background-color: #fff28e;
+  border-style: groove;
+  border-color: #b5f349;
+  font-weight: bold;
+  border-radius: 10px;
+  /* 这里设置圆角的半径为10像素 */
+}
+
+.DeleteTask:hover {
+  background-color: #f8e099;
+}
+
+.ShowResult {
+  margin-left: 10px;
+  width: 100px;
+  height: 60px;
+  background-color: #fff28e;
+  border-style: groove;
+  border-color: #b5f349;
+  font-weight: bold;
+  border-radius: 10px;
+  /* 这里设置圆角的半径为10像素 */
+}
+
+.ShowResult:hover {
+  background-color: #f8e099;
+}
+
+/* 添加伪元素创建圆圈 */
+/* .ShowResult::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  z-index: -1; /* 将圆圈放在按钮的底层 */
+/* } */
+*/
+
+/* 去掉删除按钮的边框 */
+.delete-btn button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* 去除鼠标悬浮时的默认样式 */
+  /* outline: none; */
+}
+
+/* 删除按钮与其他部分保持一致的背景颜色 */
+.delete-btn button svg {
+  fill: currentColor;
+}
+
+/* 鼠标悬浮时仅SVG图标本身变为蓝色 */
+.delete-btn button:hover svg {
+  fill: rgb(1, 33, 176);
+}
+
+
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.collapsible {
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.collapsible,
+.side-nav {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul:not(.browser-default) li {
+  list-style-type: none;
+}
+
+.collapsible-header {
+  display: block;
+  cursor: pointer;
+  min-height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.collapsible-body {
+  display: none;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  background: #cfe6fa;
+}
+
+.collapsible-body p {
+  cursor: pointer;
+  margin: 0;
+  padding: 1.8rem;
+}
+
+
+/* 本来不想通过这种方式单独修饰左侧导航栏的图标之后的内容，但是没办法，materialize的css部分效果太蠢了点击按钮会自动把背景变绿、输入框默认占据全部宽度，原本试图单独找出折叠组件有关CSS但失败了，只能这么手动修改一下高度，否则会造成文字比图标低了一些影响美观 */
+.AfterIconText {
+  position: relative;
+  top: -5px;
+  /*向上抬起五个像素 */
+}
+
+/* 针对Webkit内核浏览器的滚动条设置，实测谷歌为该设置 */
+/* 这里只设置了滚动条的宽度和背景色 */
+::-webkit-scrollbar {
+  width: 10px;
+  border-style: groove;
+  border-width: 0.8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d7c6b8;
+  /* 滚动条的拖动块颜色 */
+}
+
+
+/* 针对非Webkit内核浏览器 */
+/* 请注意，这可能不适用于所有浏览器 */
+/* 可以根据需要添加更多前缀或进行单独的样式调整 */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #d7c6b8 #f0f0f0;
+  /*滚动条的拖动块颜色和滚动条背景颜色 */
+}
+
+
+ul .pagination {
+  --fa-style-family-brands: 'Font Awesome 6 Brands';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
+  --fa-font-regular: normal 400 1em/1 'Font Awesome 6 Free';
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+  box-sizing: inherit;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+
+.pagination li {
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: top;
+  height: 30px
+}
+
+.pagination li a {
+  color: #444;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  line-height: 30px
+}
+
+.pagination li.active a {
+  color: #fff
+}
+
+.pagination li.active {
+  background-color: #65bcff
+}
+
+.pagination li.disabled a {
+  cursor: default;
+  color: #999
+}
+
+.pagination li i {
+  font-size: 2rem
+}
+
+.pagination li.pages ul li {
+  display: inline-block;
+  float: none
+}
+
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .pagination {
+    width: 100%
+  }
+
+  .pagination li.prev,
+  .pagination li.next {
+    width: 10%
+  }
+
+  .pagination li.pages {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.waves-effect {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  box-sizing: inherit;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: .3s ease-out;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: top;
+  height: 30px;
+  list-style-type: none;
+}
+
+
+.waves-effect.waves-light .waves-ripple {
+  background-color: rgba(255, 255, 255, 0.45)
+}
+
+.waves-effect.waves-red .waves-ripple {
+  background-color: rgba(244, 67, 54, 0.7)
+}
+
+.waves-effect.waves-yellow .waves-ripple {
+  background-color: rgba(255, 235, 59, 0.7)
+}
+
+.waves-effect.waves-orange .waves-ripple {
+  background-color: rgba(255, 152, 0, 0.7)
+}
+
+.waves-effect.waves-purple .waves-ripple {
+  background-color: rgba(156, 39, 176, 0.7)
+}
+
+.waves-effect.waves-green .waves-ripple {
+  background-color: rgba(76, 175, 80, 0.7)
+}
+
+.waves-effect.waves-teal .waves-ripple {
+  background-color: rgba(0, 150, 136, 0.7)
+}
+
+.waves-effect input[type="button"],
+.waves-effect input[type="reset"],
+.waves-effect input[type="submit"] {
+  border: 0;
+  font-style: normal;
+  font-size: inherit;
+  text-transform: inherit;
+  background: none
+}
+
+.waves-effect img {
+  position: relative;
+  z-index: -1
+}
+
+.waves-notransition {
+  transition: none !important
+}
+
+.waves-circle {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%)
+}
+
+.waves-input-wrapper {
+  border-radius: 0.2em;
+  vertical-align: bottom
+}
+
+.waves-input-wrapper .waves-button-input {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1
+}
+
+.waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+  -webkit-mask-image: none
+}
+
+.waves-block {
+  display: block
+}
+
+.waves-effect .waves-ripple {
+  z-index: -1
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+}
+
+
+/* waves-ripple用于实现波纹效果 */
+.waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.7s ease-out;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+#EchartsPointsPicture {
+  height: 800px;
+}
+
+[id*="FormName"] {
+  font-size: 30px; /* 调整您想要的字体大小 */
+  font-weight: 700;
+  margin-top: 30px;
+}
