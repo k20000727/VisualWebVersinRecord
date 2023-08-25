@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>动态小窗栏示例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script> -->
+  <script src="{{ url_for('static', filename='js/echarts.js') }}"></script>
+  <!-- 图标引用 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-6.4.0-web/css/all.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Self.css') }}">
+  <!-- 引入Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- 引入vue-toastification -->
+<link rel="stylesheet" href="https://unpkg.com/vue-toastification/dist/index.css">
+<!-- <script src="https://unpkg.com/vue-toastification/dist/index.js"></script> -->
+
+
+
+  <script src="{{ url_for('static', filename='js/MainFunction.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/HTMLContent.js') }}"></script>
+
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS--> 
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='materialize/css/materialize.min.css') }}"> -->
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+</head>
+
+<body onbeforeunload="onPageSwitch()">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ url_for('static', filename='materialize/js/materialize.min.js') }}"></script>
+
+  <div id="banner">
+    <img src="{{ url_for('static', filename='logo/new.jpg') }}" alt="Logo">
+  </div>
+
+  <div class="sidebar" id="MainBlock1">
+    <style>
+      ul {
+        list-style: none;
+        /* 去除列表中的原点 */
+      }
+    </style>
+
+
+
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <!-- PS:图标的用法：在i标签的中间选择图标名 -->
+        <div class="collapsible-header"><i class="material-icons">clear_all</i><a class = "AfterIconText">XCP数据统计</a></div>
+        <div class="collapsible-body">
+          <p  onclick="openWindow('首页',3)">首页</p>
+          <hr>
+          <p  onclick="openWindow('数据总览',1)">数据总览</p>
+          <hr>
+          <p onclick="openWindow('统计任务', 2)">统计任务</p>
+        </div>
+
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">toc</i><a class = "AfterIconText">二</a></div>
+        <div class="collapsible-body">
+          <p>test</p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">view_list</i><a class = "AfterIconText">三</a></div>
+        <div class="collapsible-body">
+          <p>test</p>
+        </div>
+      </li>
+    </ul>
+
+  </div> 
+
+  <div id="MainBlock">
+    <div class="small-windows-container">
+      <div id="SmallWindows">
+        <div class="window-empty-content">
+          <p> &nbsp;</p>
+        </div>
+        <!-- <div class="window-content"></div> -->
+      </div>
+    </div>
+
+    <div id="content">
+      <!-- 使用iframe加载内容 -->
+      <!-- <iframe id="contentIframe" width="100%" height="500" frameborder="0" allowfullscreen sandbox="allow-scripts">
+      </iframe> -->
+      <!-- <iframe src="http://127.0.0.1:5000/Inner"
+          width="100%" height="500" frameborder="0"
+          allowfullscreen sandbox="allow-scripts">
+  </iframe> -->
+
+    </div>
+  </div>
+
+  <!-- Import Vue.js script at the end of the body -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <!-- <script src="{{ url_for('static', filename='js/MainFunction.js') }}"></script> -->
+
+
+
+
+
+</body>
+
+</html>
